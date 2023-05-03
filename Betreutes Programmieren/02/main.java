@@ -5,17 +5,19 @@ public class main {
 
     // --------------------------------------
     public static void main(String[] args) {
+
+        // Create array
         ArrayList<Animal> animals = new ArrayList<Animal>();
 
+        // Fill array
         animals.add(new Dog("Fido", 3));
         animals.add(new Cat("Fluffy", 2));
         animals.add(new Cat("Kitty", 99));
         animals.add(new Dog("Lassie", 666));
 
-
+        // Call functions
         makeAllNoises(animals);
- 
-
+        GetAllInformation(animals)
     }
 
     // --------------------------------------
