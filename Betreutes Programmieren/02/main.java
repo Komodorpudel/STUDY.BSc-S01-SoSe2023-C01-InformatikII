@@ -28,4 +28,8 @@ public class main {
     }
 
     //GetAllInformation
+    public static void GetAllInformation(List<Animal> animals){
+        for (Animal animal : animals) {
+            animal.getInfo();
+    }
 }
