@@ -34,5 +34,10 @@ public abstract class Animal{
 
     // -- Make Noise (abstract)
     public abstract void makeNoise();
+
+    // -- Get Info
+    public void getInfo(){
+        System.out.println(" Name" + this.name + ", Age:" + this.age);
+    }
     //
 }
