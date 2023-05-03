@@ -1,11 +1,12 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class main {
 
     // --------------------------------------
     public static void main(String[] args) {
-        List<Animal> animals = new ArrayList<>();
-
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+/* 
         animals.add(new Dog("Fido", 3));
         animals.add(new Cat("Fluffy", 2));
         animals.add(new Cat("Kitty", 99));
@@ -13,7 +14,7 @@ public class main {
 
 
         makeAllNoises(animals);
-
+ */
 
     }
 
