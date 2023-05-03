@@ -17,7 +17,7 @@ public class main {
 
         // Call functions
         makeAllNoises(animals);
-        GetAllInformation(animals)
+        GetAllInformation(animals);
     }
 
     // --------------------------------------
