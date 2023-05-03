@@ -6,7 +6,7 @@ public class main {
     // --------------------------------------
     public static void main(String[] args) {
         ArrayList<Animal> animals = new ArrayList<Animal>();
-/* 
+
         animals.add(new Dog("Fido", 3));
         animals.add(new Cat("Fluffy", 2));
         animals.add(new Cat("Kitty", 99));
@@ -14,7 +14,7 @@ public class main {
 
 
         makeAllNoises(animals);
- */
+ 
 
     }
 
@@ -28,8 +28,9 @@ public class main {
     }
 
     //GetAllInformation
-    public static void GetAllInformation(List<Animal> animals){
+    public static void GetAllInformation(List<Animal> animals) {
         for (Animal animal : animals) {
             animal.getInfo();
+        }
     }
 }
