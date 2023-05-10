@@ -1,5 +1,3 @@
-import Shape;
-
 public class Main {
     public static void main(String[] args) {
 //          Schritt 1: Erstellen der Formen
