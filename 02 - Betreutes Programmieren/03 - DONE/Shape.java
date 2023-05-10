@@ -1,6 +1,6 @@
 public interface Shape {
 
     // Methode deklarieren
-    double getArea();
-    double getPerimeter();
+public double getArea();
+public double getPerimeter();
 }
