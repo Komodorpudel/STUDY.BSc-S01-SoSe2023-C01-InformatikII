@@ -5,6 +5,7 @@ public class Aufgabe_16a {
 
     // --------------------------------------
     public static void main(String[] args) {
+        
         // Erstellen Sie ein LocalDate-Objekt für das aktuelle Datum
         LocalDate heute = LocalDate.now();
 
