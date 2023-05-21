@@ -13,6 +13,8 @@ public class Aufgabe_16c {
     public static LocalTime zufaelligeUhrzeit() {
         int stunde = ThreadLocalRandom.current().nextInt(0, 24);
         int minute = ThreadLocalRandom.current().nextInt(0, 60);
+
+        // Return
         return LocalTime.of(stunde, minute);
     }
 
