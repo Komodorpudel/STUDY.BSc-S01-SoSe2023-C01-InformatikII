@@ -2,7 +2,6 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.Collection;
 //
 
 public class Aufgabe_18b {
@@ -56,7 +55,7 @@ public class Aufgabe_18b {
         System.out.println("Durchschnittliche relative Abweichung: " + avgRelDelta);
 
         // 4. Erzeugen Sie dann so lange zufällige Zahlen zwischen 0 und 9, bis die durchschnittliche relative Abweichung weniger als 0.01 beträgt
-        while (avgRelDelta >= 0.01) {^
+        while (avgRelDelta >= 0.01) {
 
             // Generiere Zufallszahl zwischen ß und 9
             int num = rand.nextInt(10);
