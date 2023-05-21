@@ -1,6 +1,9 @@
+// Necessary packages/classes:
 import java.time.LocalTime;
 import java.time.Duration;
 import java.util.concurrent.ThreadLocalRandom;
+// https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/package-summary.html
+//
 
 public class Aufgabe_16c {
 
@@ -16,6 +19,8 @@ public class Aufgabe_16c {
     // --------------------------------------
 
     public static void main(String[] args) {
+
+        // Zwei zufällige Zeiten bestimmen
         LocalTime t1 = zufaelligeUhrzeit();
         LocalTime t2 = zufaelligeUhrzeit();
 
@@ -33,6 +38,7 @@ public class Aufgabe_16c {
         // Bestimmen Sie dann, solange zwischen t1 und t2 mehr als 15 Minuten liegen, eine neue zufällige Zeit
         while (Duration.between(t1, t2).toMinutes() > 15) {
             LocalTime neueZeit = zufaelligeUhrzeit();
+            
             // mit der sie t2 überschreiben, sofern die neue Zeit zwischen t1 und dem alten Wert von t2 liegt
             if (neueZeit.isAfter(t1) && neueZeit.isBefore(t2)) {
                 t2 = neueZeit;

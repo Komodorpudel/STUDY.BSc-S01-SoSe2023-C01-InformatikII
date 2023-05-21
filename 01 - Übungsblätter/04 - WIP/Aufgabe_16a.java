@@ -1,5 +1,8 @@
+// Necessary packages/classes:
 import java.time.LocalDate;
 import java.time.Period;
+// https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/package-summary.html
+//
 
 public class Aufgabe_16a {
 
@@ -10,8 +13,8 @@ public class Aufgabe_16a {
         LocalDate heute = LocalDate.now();
 
         // Erstellen Sie ein LocalDate-Objekt für den vorläufigen Termin der ersten Klausur
-        // Zum Beispiel, hier setze ich den Termin auf 2023-09-01
-        LocalDate klausurtermin = LocalDate.of(2023, 9, 1);
+        // 1. August 2023
+        LocalDate klausurtermin = LocalDate.of(2023, 8, 1);
 
         // Erstellen Sie ein Period-Objekt, das die Zeitspanne vom aktuellen Datum zum Prüfungstermin enthält
         Period bisZurKlausur = Period.between(heute, klausurtermin);
