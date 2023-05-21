@@ -57,7 +57,7 @@ public class Aufgabe_18b {
         // 4. Erzeugen Sie dann so lange zufällige Zahlen zwischen 0 und 9, bis die durchschnittliche relative Abweichung weniger als 0.01 beträgt
         while (avgRelDelta >= 0.01) {
 
-            // Generiere Zufallszahl zwischen ß und 9
+            // Generiere Zufallszahl zwischen 0 und 9
             int num = rand.nextInt(10);
 
             // Zähle hoch in map
