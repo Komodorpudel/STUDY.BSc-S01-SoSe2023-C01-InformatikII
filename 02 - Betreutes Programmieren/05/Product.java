@@ -16,6 +16,8 @@ abstract class Product {
     // Definition der statischen Variable usedIds, um die bereits verwendeten IDs zu speichern
     private static final HashSet<Integer> usedIds = new HashSet<>();
     // Anmerkung: HashSet effizienter als ArrayList, für diese aufgabe aber overblown
+    // private static final List<Integer> usedIds = new ArrayList<>();
+
     // --------------------------------------
 
     // Konstruktor wird verwendet um Subclasses zu erstellen (Vermeidung duplicate code etc.) (SAH: throws ... hinzugefügt)
@@ -28,7 +30,7 @@ abstract class Product {
             // HashSet erlaubt keine Duplicate aber droppet einfach entry, daher exception still useful
         }
 
-        // Sämtlicher code nach throw wird nichtmehr ausgeführt
+        // Sämtlicher code nach throw wird nichtmehr ausgeführt falls throw geworfen wird
 
         // SAH: Wenn die ID noch nicht verwendet wurde, wird sie der Liste der verwendeten IDs hinzugefügt
         usedIds.add(productID);

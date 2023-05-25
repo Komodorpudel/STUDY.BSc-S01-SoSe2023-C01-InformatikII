@@ -43,6 +43,7 @@ class Shelf<T extends Product> {
 
         // Durchläuft die Liste und überprüft, ob ein Produkt des angegebenen Typs vorhanden ist
         for (T product : products) {
+            // Überprüft ob product eine Class Instance von productType ist
             if (productType.isInstance(product)) {
 
                 //Return
