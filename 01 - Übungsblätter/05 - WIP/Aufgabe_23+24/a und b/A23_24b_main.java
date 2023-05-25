@@ -1,10 +1,15 @@
+// Necessary packages/classes:
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+//
 
 public class A23_24b_main {
+
+    // --------------------------------------
+
     public static void main(String[] args) {
         try {
             Student student = new Student("John Doe", 1234567);
@@ -33,4 +38,7 @@ public class A23_24b_main {
             System.out.println("Ungültige Eingabe");
         }
     }
+
+    // --------------------------------------
+
 }

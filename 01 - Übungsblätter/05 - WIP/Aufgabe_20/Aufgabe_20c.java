@@ -1,9 +1,14 @@
+// Necessary packages/classes:
 import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+//
 
 public class Main {
+
+    // --------------------------------------
+
     public static void main(String[] args) {
         Random random = new Random();
         Supplier<Character> charSupplier = () -> (char) ('a' + random.nextInt(26));
@@ -24,4 +29,7 @@ public class Main {
 
         System.out.println("Durchschnittliche Länge: " + averageLength);
     }
+
+    // --------------------------------------
+
 }

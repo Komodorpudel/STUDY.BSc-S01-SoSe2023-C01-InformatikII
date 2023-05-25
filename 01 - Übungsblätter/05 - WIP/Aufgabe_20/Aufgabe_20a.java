@@ -1,7 +1,12 @@
+// Necessary packages/classes:
 import java.util.Random;
 import java.util.stream.IntStream;
+//
 
 public class Aufgabe_20a {
+
+    // --------------------------------------
+
     public static void main(String[] args) {
         Random random = new Random();
         int sum = random.ints(0, 100)
@@ -12,4 +17,7 @@ public class Aufgabe_20a {
 
         System.out.println("Summe: " + sum);
     }
+
+    // --------------------------------------
+
 }

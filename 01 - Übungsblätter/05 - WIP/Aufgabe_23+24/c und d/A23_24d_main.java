@@ -1,8 +1,14 @@
+// Necessary packages/classes:
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+//
+
 
 public class A23_24d_main {
+
+    // --------------------------------------
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         input.useDelimiter(Pattern.compile("[\\r\\n]+"));
@@ -29,5 +35,8 @@ public class A23_24d_main {
             System.out.println("Es gibt keinen Studenten mit dieser Matrikelnummer.");
         }
     }
+
+    // --------------------------------------
+
 }
    
