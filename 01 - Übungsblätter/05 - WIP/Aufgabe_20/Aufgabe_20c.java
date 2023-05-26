@@ -15,23 +15,28 @@ public class Aufgabe_20c {
         Random random = new Random();
 
         // 1. ein Supplier-Objekt fur ¨ Character-Objekte mit zuf¨alligen, lateinischen Kleinbuchstaben erzeugt,
-        Supplier<Character> characterSupplier = () -> (char) (random.nextInt(26) + 'a');
+        Supplier<Character> characterSupplier = () -> (char) ('a' + random.nextInt(26));
 
         // 2. ein Stream-Objekt fur ¨ String-Objekte erzeugt, welches das zuvor erstellte SupplierObjekt verwendet,
         //    um W¨orter bestehend aus zuf¨alligen lateinischen Kleinbuchstaben ...
+        // SAH: Lamda mit Anweisungsblock: "Für jedes Wort mache folgendes:"
         Stream<String> wordStream = Stream.generate(() -> {
+
+            // SAH: Für jedes Wort ein anfänglich leerer String
             StringBuilder wordBuilder = new StringBuilder();
 
             // ... mit zuf¨alliger L¨ange zwischen 5 und 10 Zeichen (jeweils einschließlich) zu erzeugen,
+            // SAH: Für jedes Wort random length und befüülen via loop
             int length = 5 + random.nextInt(6); 
             for (int i = 0; i < length; i = i + 1) {
                 wordBuilder.append(characterSupplier.get());
             }
+            // SAH: wordBuilder in String verwandeln und Return
             return wordBuilder.toString();
             
         })
         // 3. die L¨ange dieses Streams auf 500 beschr¨ankt,
-        .limit(500); // Begrenzen Sie den Stream auf 500 Wörter
+        .limit(500);
 
         // 4. einen IntStream mit den L¨angen der Worte erzeugt und
         IntStream lengthStream = wordStream.mapToInt(String::length);
@@ -43,5 +48,5 @@ public class Aufgabe_20c {
     }
 
     // --------------------------------------
-    
+
 }
