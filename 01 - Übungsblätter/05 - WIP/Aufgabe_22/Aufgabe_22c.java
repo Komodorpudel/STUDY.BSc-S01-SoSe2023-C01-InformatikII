@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 //
 
-public class Aufgabe_20c {
+public class Aufgabe_22c {
 
     // --------------------------------------
 

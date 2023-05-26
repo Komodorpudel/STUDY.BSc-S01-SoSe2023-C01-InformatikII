@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.stream.IntStream;
 //
 
-public class Aufgabe_20a {
+public class Aufgabe_22a {
 
     // --------------------------------------
 

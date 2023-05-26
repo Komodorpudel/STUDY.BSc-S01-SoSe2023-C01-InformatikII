@@ -4,7 +4,7 @@ import java.util.function.IntSupplier;
 import java.util.stream.IntStream;
 //
 
-public class Aufgabe_20b {
+public class Aufgabe_22b {
 
     // --------------------------------------
 
