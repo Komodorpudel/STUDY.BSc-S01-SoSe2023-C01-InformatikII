@@ -3,17 +3,17 @@ import java.util.HashMap;
 import java.util.Map;
 //
 
-public class Student {
+public class Student_c {
 
     // --------------------------------------
 
     private String name;
     private int matrikelNummer;
-    private static Map<Integer, Student> students = new HashMap<>();
+    private static Map<Integer, Student_c> students = new HashMap<>();
 
     // --------------------------------------
 
-    public Student(String name, int matrikelNummer) throws DuplicateException {
+    public Student_c(String name, int matrikelNummer) throws DuplicateException {
         setName(name);
         setMatrikelNummer(matrikelNummer);
         if (students.containsKey(matrikelNummer)) {
@@ -54,7 +54,7 @@ public class Student {
 
     // --------------------------------------
 
-    public static Student getStudentByMatrikelNummer(int matrikelNummer) {
+    public static Student_c getStudentByMatrikelNummer(int matrikelNummer) {
         return students.get(matrikelNummer);
     }
 

@@ -18,7 +18,7 @@ public class A23_24d_main {
                 String name = input.next();
                 System.out.println("Geben Sie die Matrikelnummer des Studenten ein:");
                 int matrikelNummer = input.nextInt();
-                Student student = new Student(name, matrikelNummer);
+                Student_c student = new Student_c(name, matrikelNummer);
                 System.out.println(student);
             } catch (DuplicateException e) {
                 System.out.println("Die Matrikelnummer existiert bereits.");
@@ -28,7 +28,7 @@ public class A23_24d_main {
         }
         System.out.println("Geben Sie eine Matrikelnummer ein:");
         int matrikelNummer = input.nextInt();
-        Student student = Student.getStudentByMatrikelNummer(matrikelNummer);
+        Student_c student = Student_c.getStudentByMatrikelNummer(matrikelNummer);
         if (student != null) {
             System.out.println(student);
         } else {
