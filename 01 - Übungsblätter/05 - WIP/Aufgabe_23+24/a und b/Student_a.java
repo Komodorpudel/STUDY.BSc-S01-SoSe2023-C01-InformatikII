@@ -1,9 +1,10 @@
+
 public class Student_a {
 
     // --------------------------------------
 
     // Atrribute:
-    // 1. Ein Student-Objekt hat einen Namen und eine Matrikelnummer
+    // a.1. Ein Student-Objekt hat einen Namen und eine Matrikelnummer
     private String name;
     private int matrikelNummer;
 
@@ -29,11 +30,11 @@ public class Student_a {
     // setName
     public void setName(String name) {
 
-        // 2. Der Name ist eine Zeichenkette und darf nicht null oder leer sein und muss mit einem
+        // a.2. Der Name ist eine Zeichenkette und darf nicht null oder leer sein und muss mit einem
         //    Großbuchstaben beginnen.
         if (name == null || name.trim().isEmpty() || !Character.isUpperCase(name.charAt(0))) {
 
-            // 4a. Wird versucht, ein Student-Objekt mit ung¨ultigen Werten f¨ur Name (oder Matrikelnummer
+            // a.4a. Wird versucht, ein Student-Objekt mit ung¨ultigen Werten f¨ur Name (oder Matrikelnummer
             //    zu erstellen, so soll eine IllegalArgumentException geworfen werden.)
             throw new IllegalArgumentException("Ungültiger Name");
         }
@@ -53,10 +54,10 @@ public class Student_a {
     // setMatrikelNummber
     public void setMatrikelNummer(int matrikelNummer) {
 
-        // 3. Die Matrikelnummer ist eine nat¨urliche Zahl und muss siebenstellig sein.
+        // a.3. Die Matrikelnummer ist eine nat¨urliche Zahl und muss siebenstellig sein.
         if (matrikelNummer < 1000000 || matrikelNummer > 9999999) {
 
-            // 4b. Wird versucht, ein Student-Objekt mit ung¨ultigen Werten (f¨ur Name oder) Matrikelnummer
+            // a.4b. Wird versucht, ein Student-Objekt mit ung¨ultigen Werten (f¨ur Name oder) Matrikelnummer
             //    zu erstellen, so soll eine IllegalArgumentException geworfen werden.
             throw new IllegalArgumentException("Ungültige Matrikelnummer");
         }
@@ -66,7 +67,8 @@ public class Student_a {
 
     // --------------------------------------
 
-    // 5. Die String-Ausgabe eines Student-Objekts soll die Form (Matrikelnummer, Name)
+
+    // a.5. Die String-Ausgabe eines Student-Objekts soll die Form (Matrikelnummer, Name)
     //    haben.
     @Override // Annotation nicht notwendig, aber good practice -> Jeder versteht, dass man eine methode aus einer superclass überschreibt
     public String toString() {

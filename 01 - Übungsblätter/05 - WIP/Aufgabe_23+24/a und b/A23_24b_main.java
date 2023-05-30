@@ -16,6 +16,12 @@ public class A23_24b_main {
             Student_a student = new Student_a("John Doe", 1234567);
             System.out.println(student);
 
+            //
+            //
+            //
+            //
+            //
+            
             // 2. ein Scanner-Objekt input f¨ur den Standardeingabestrom erstellt,
             Scanner input = new Scanner(System.in);
 
@@ -50,6 +56,7 @@ public class A23_24b_main {
                 
                 // 8. Im Falle einer ung¨ultigen Eingabe soll das Programm nicht abbrechen, sondern
                 //    "Ungueltige Eingabe" auf der Kommandozeile ausgegeben werden.
+                //
                 catch (IllegalArgumentException | InputMismatchException e) {
                     System.out.println("Ungültige Eingabe");
                     break;
@@ -60,10 +67,12 @@ public class A23_24b_main {
             for (Student_a s : studentList) {
                 System.out.println(s);
             }
+
+            // SAH: Scanner close (wird von Aufgabenstellung nicht verlangt)
+            input.close();
         
     }
         
-
     // --------------------------------------
 
 }
