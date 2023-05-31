@@ -58,7 +58,7 @@ public class Library {
     public List<Book> findBooksPublishedAfter(int year) {
         // TODO Rückgabewert per Stream ermitteln
         return books.stream() // Convert list into a stream
-                    .filter(book -> book.getYear() >= year) // filters the list for true
+                    .filter(book -> book.getYear() > year) // filters the list for true
                     .collect(Collectors.toList()); //Terminal: converts stream into a new list
     }
 
@@ -67,7 +67,7 @@ public class Library {
     // SAH: displayBooks
     public void displayBooks() {
         // TODO Ausgabe aller Bücher unter Verwendung einer Methoden-Referenz von system.print (eine Codezeile!)
-        books.stream().forEach(System.out::println);
+        books.forEach(System.out::println);
 
         // System.out::println ist eine Methodenreferenz, die in Verbindung mit der forEach()-
         // Methode verwendet wird, um fur jedes Element einer Sequenz oder Sammlung die ¨ toString()-
