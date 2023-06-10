@@ -8,22 +8,22 @@ public class BankAccount {
     // Attribute:
 
         /*      Bankkonten haben
-                        den Namen des Kontohalters,
-                        eine Kontonummer,
-                        ein Er¨offnungsdatum
-                        sowie einen Kontowert.
+                        1. den Namen des Kontohalters,
+                        2. eine Kontonummer,
+                        3. ein Er¨offnungsdatum
+                        4. sowie einen Kontowert.
 
-                Der Name des Kontoinhabers ist eine Zeichenkette und muss aus mindestens einem Wort bestehen, das mit einem lateinischen Großbuchstaben beginnt, gefolgt von beliebig vielen lateinischen Kleinbuchstaben.
-                Der Name des Kontoinhabers kann aus mehreren Worten, getrennt durch Leerzeichen bestehen.
-                Der Name des Kontoinhabers kann jederzeit ge¨andert und gelesen werden.
+                1.a Der Name des Kontoinhabers ist eine Zeichenkette und muss aus mindestens einem Wort bestehen, das mit einem lateinischen Großbuchstaben beginnt, gefolgt von beliebig vielen lateinischen Kleinbuchstaben.
+                1.b Der Name des Kontoinhabers kann aus mehreren Worten, getrennt durch Leerzeichen bestehen.
+                1.c Der Name des Kontoinhabers kann jederzeit ge¨andert und gelesen werden.
 
-                Die Kontonummer ist eine Zeichenkette, die aus genau 12 Großbuchstaben und Ziffern besteht, z.B. "A12B34C56D78".
-                Die Kontonummer wird beim Erstellen des Bankkontos festgelegt und kann danach nicht mehr ge¨andertwerden. 
+                2.a Die Kontonummer ist eine Zeichenkette, die aus genau 12 Großbuchstaben und Ziffern besteht, z.B. "A12B34C56D78".
+                2.b Die Kontonummer wird beim Erstellen des Bankkontos festgelegt und kann danach nicht mehr ge¨andertwerden. 
         */
-    private String accountHolderName;
-    private final String accountNumber;
-    private final LocalDate openingDate;
-    private double balance;
+    private String accountHolderName; // 1.
+    private final String accountNumber; // 2.
+    private final LocalDate openingDate; // 3. 
+    private double balance; // 4. 
 
     private static final Pattern NAME_PATTERN = Pattern.compile("[A-Z][a-z]*(\\s[A-Z][a-z]*)*");
     private static final Pattern ACCOUNT_NUMBER_PATTERN = Pattern.compile("[A-Z0-9]{12}");
