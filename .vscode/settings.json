@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "02 - Betreutes Programmieren/07 - WIP/a+b",
-        "02 - Betreutes Programmieren/07 - WIP/c"
+        "01 - Übungsblätter/06 - WIP/A26+A27"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
