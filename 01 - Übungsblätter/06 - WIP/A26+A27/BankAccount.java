@@ -51,7 +51,7 @@ public class BankAccount {
 
     // --------------------------------------
 
-    // 8. Alle Attribute des Bankkontos sind ¨offentlich lesbar. (SAH: Siehe Setter unten)
+    // 8. Alle Attribute des Bankkontos sind ¨offentlich lesbar. (SAH: Siehe Getter unten)
 
     // 8.a get
     public String getAccountHolderName() {
