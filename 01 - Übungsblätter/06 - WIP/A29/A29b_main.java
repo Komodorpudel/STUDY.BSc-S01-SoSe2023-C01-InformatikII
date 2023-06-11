@@ -74,7 +74,10 @@ public class A29b_main extends JFrame {
             buttonPanel.add(numberButtons[i-1]);
         }
 
-        // Add Clear, 0, Okay buttons
+        // Add 0, Clear, Okay buttons
+        numberButtons[0] = createNumberButton("0");
+        buttonPanel.add(numberButtons[0]);
+
         clearButton = new JButton("Clear");
         clearButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -83,14 +86,8 @@ public class A29b_main extends JFrame {
         });
         buttonPanel.add(clearButton);
 
-        numberButtons[0] = createNumberButton("0");
-        buttonPanel.add(numberButtons[0]);
-
         okayButton = new JButton("Okay");
-        
         buttonPanel.add(okayButton);
-
-        add(buttonPanel, BorderLayout.CENTER);
 
         add(buttonPanel, BorderLayout.CENTER);
 
@@ -112,7 +109,7 @@ public class A29b_main extends JFrame {
     private JButton createNumberButton(String text) {
 
         JButton button = new JButton(text);
-        
+
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 inputField.setText(inputField.getText() + text);
