@@ -1,5 +1,7 @@
+// Necessary packages/classes:
 import java.time.LocalDate;
 import java.util.regex.Pattern;
+//
 
 public class BankAccount {
 
@@ -94,7 +96,7 @@ public class BankAccount {
     // --------------------------------------
 
     // 9. Danach kann der Kontostand sowohl erh¨oht als auch verringert werden.
-    public void addBalance(int amount) {
+    public void addBalance(double amount) {
         this.balance = this.balance + amount;
     }
 
@@ -111,14 +113,12 @@ public class BankAccount {
             return true;
         }
 
-
         // Second step: Check if object is of type BankAccount
         //              Also avoids problem of potentially casting object that is not BankAccount below in third step
         if (!(obj instanceof BankAccount)) {
             return false;
         }
         
-
         // Third step: Check if accountNumber is identical
         //             and return
         BankAccount other = (BankAccount) obj;
@@ -126,6 +126,11 @@ public class BankAccount {
     }
 
     // --------------------------------------
+
+    // "It is generally a good practice to override the hashCode method when you override the equals method, and vice versa.
+    // This is because the contract of hashCode is designed to work in conjunction with equals."
+
+    // SAH: Not overriding this could mean that two bankAccounts are identical accoording to equals() method but have different hashes -> Not consistent
 
     @Override
     public int hashCode() {
@@ -137,7 +142,7 @@ public class BankAccount {
     // 11. W¨ahlen Sie eine geeigneteDarstellung des Bankkontos als Zeichenkette.
     @Override
     public String toString() {
-        return "BankAccount {Kontoinhabername ='" + accountHolderName + '\'' + ", Kontonummer ='" + accountNumber + '\'' + ", Eröffnungsdatum =" + openingDate + ", Kontostand =" + balance + '}';
+        return "BankAccount (Kontoinhabername = '" + accountHolderName + '\'' + ", Kontonummer = '" + accountNumber + '\'' + ", Eröffnungsdatum = " + openingDate + ", Kontostand = " + balance + ')';
     }
 
     // --------------------------------------
