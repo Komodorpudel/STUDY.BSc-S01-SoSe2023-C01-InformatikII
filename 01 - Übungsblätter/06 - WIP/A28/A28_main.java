@@ -1,7 +1,8 @@
-// package blatt06;
 
+// package blatt06;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+//
 
 public class A28_main {
 
@@ -25,7 +26,7 @@ public class A28_main {
 
             bank.createBankAccount("Donald Duck", "ENTENHAUSEN4");
             bank.createBankAccount("Donald Duck", "PHANTOMIAS12");
-            
+
             bank.createBankAccount("Klaas Klever", "ENTENHAUSEN5");
 
             // SAH: initialize int i

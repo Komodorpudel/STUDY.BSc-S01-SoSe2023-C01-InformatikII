@@ -1,12 +1,18 @@
+
 // Aufgabenstellung:
-    // 1. Eine Bank verwaltet Bankkonten, die einzigartige Kontennummern, einen Inhaber sowie einen Kontostand haben. 
+    // 1. Eine Bank verwaltet Bankkonten, die einzigartige Kontennummern, einen Inhaber sowie einen Kontostand haben.
+
     // 2. Eine Bank kann neue Konten er¨offnen lassen, dazu bekommt Sie den Namen des Inhabers sowie die gewunschte Kontonummer gegeben.
     // 2.a Ist bereits ein Konto ¨mit dieser Kontonummer bei der Bank angelegt worden, so wird eine IllegalBankingException geworfen (Die Ausnahme wird in der n¨achsten Teilaufgabe implementiert).
+
     // 3. Die Bank stellt eine M¨oglichkeit zur Verfugung, die Summe aller Kon- ¨tost¨ande eines Inhabers zu erhalten.
-    // 3.a Wird versucht, die Summe aller Kontost¨ande fur¨ einen Inhaber zu erhalten, der kein Konto in dieser Bank hat, so wird die Summe 0 zuruckgegeben. 
+    // 3.a Wird versucht, die Summe aller Kontost¨ande fur¨ einen Inhaber zu erhalten, der kein Konto in dieser Bank hat, so wird die Summe 0 zuruckgegeben.
+
     // 4. Außerdem kann von bzw. auf einem Konto mit einer gegebenen Konto- ¨nummer Geld abgehoben bzw. eingezahlt werden.
     // 4.a Wenn versucht wird, mehr als 500 Euroabzuheben oder einzuzahlen, oder eine nicht existente Kontonummer verwendet wird, so wird eine IllegalBankingException geworfen.
+    
     // 5. Erzeugen Sie fur die Berechnung der Summe aller Kontost ¨ ¨ande einen geeigneten Stream.
+//
 
 // Necessary packages/classes:
 import java.util.*;

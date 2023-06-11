@@ -1,3 +1,4 @@
+
 // package blatt06;
 
 public class A2627_main {
