@@ -1,3 +1,4 @@
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -118,16 +119,17 @@ public class TaschenrechnerGUI extends JFrame {
         add(resultLabel, c);
 
         // Initialize OperationsButtonListener
-        OperationButtonListener action = new OperationButtonListener(resultLabel, firstNumberField, secondNumberField);
+        OperationButtonListener listener = new OperationButtonListener(resultLabel, firstNumberField, secondNumberField);
 
-        // Default action event for a button is to click on it.
-        // action is the action that will be performed when clicked
-        // "addActionListener" will listen to default action event
-        addButton.addActionListener(action);
-        subtractButton.addActionListener(action);
-        multiplyButton.addActionListener(action);
-        divideButton.addActionListener(action);
+        // Default listener event for a button is to click on it.
+        // listener is the listener that will be performed when clicked
+        // "addActionListener" will listen to default actionevent of button (click)
+        addButton.addActionListener(listener);
+        subtractButton.addActionListener(listener);
+        multiplyButton.addActionListener(listener);
+        divideButton.addActionListener(listener);
 
         pack();
+        // If not used, I need to manually resize windows
     }
 }
