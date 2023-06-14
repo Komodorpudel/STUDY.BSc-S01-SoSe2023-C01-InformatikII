@@ -41,6 +41,7 @@ public class OperationButtonListener implements ActionListener {
             double result;
 
             // Führe Operation durch
+            // Switch stops checking after one condition is met and just exectues next code, that's why break is needed
             switch (operation) {
                 
                 case "+":
