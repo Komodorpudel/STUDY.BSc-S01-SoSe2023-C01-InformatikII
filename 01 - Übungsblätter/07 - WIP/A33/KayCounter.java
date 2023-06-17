@@ -3,27 +3,35 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 
-public class KeyCounter {
+public class KeyCounter extends JFrame {
 
-    private static int counter = 0;
+    private int count;
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("KeyCounter: 0");
-        frame.setSize(300, 100);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public KeyCounter() {
+        setTitle("KeyCounter: 0");
+        setSize(200, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.addKeyListener(new KeyAdapter() {
+        count = 0;
+
+        addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyChar() == 'P' && e.isShiftDown()) {
-                    counter += 10;
+                    count += 10;
                 } else if (e.getKeyChar() == 'p' || e.getKeyChar() == 'P') {
-                    counter++;
+                    count += 1;
                 }
-                frame.setTitle("KeyCounter: " + counter);
+                setTitle("KeyCounter: " + count);
             }
         });
+        setFocusable(true);
+    }
 
-        frame.setFocusable(true);
-        frame.setVisible(true);
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            KeyCounter frame = new KeyCounter();
+            frame.setVisible(true);
+        });
     }
 }

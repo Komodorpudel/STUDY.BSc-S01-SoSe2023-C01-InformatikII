@@ -4,27 +4,40 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 
 
-public class TitleChanger {
-
+public class TitleChanger extends JFrame {
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    
+    public TitleChanger() {
+        setTitle("TitleChanger");
+        setSize(350, 100);
+        setLayout(new GridLayout(2, 2));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        button1 = new JButton("Button 1");
+        button1.addActionListener((ActionEvent e) -> setTitle("Title changed by Button 1"));
+        
+        button2 = new JButton("Button 2");
+        button2.addActionListener((ActionEvent e) -> setTitle("Title changed by Button 2"));
+        
+        button3 = new JButton("Button 3");
+        button3.addActionListener((ActionEvent e) -> setTitle("Title changed by Button 3"));
+        
+        button4 = new JButton("Button 4");
+        button4.addActionListener((ActionEvent e) -> setTitle("Title changed by Button 4"));
+        
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
+    }
+    
     public static void main(String[] args) {
-        // Erstellen eines neuen Fensters (JFrame)
-        JFrame frame = new JFrame("TitleChanger");
-        frame.setSize(350, 100);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Erstellen eines Panels mit einem 2x2 Grid-Layout zur Aufnahme der Buttons
-        JPanel panel = new JPanel(new GridLayout(2, 2));
-
-        // Erstellen der vier Buttons und Hinzufügen von Action-Listenern mit Lambda-Ausdrücken
-        for (int i = 1; i <= 4; i++) {
-            int buttonNumber = i;
-            JButton button = new JButton("Button " + buttonNumber);
-            button.addActionListener(e -> frame.setTitle("Title changed by Button " + buttonNumber));
-            panel.add(button);
-        }
-
-        // Hinzufügen des Panels zum Fenster und Anzeigen des Fensters
-        frame.add(panel);
-        frame.setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            TitleChanger frame = new TitleChanger();
+            frame.setVisible(true);
+        });
     }
 }

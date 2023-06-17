@@ -6,39 +6,43 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseEvent;
 
 public class MouseHighlighter extends JFrame {
-    
-    private int mouseX = -20;
-    private int mouseY = -20;
+
+    private Point mousePoint;
 
     public MouseHighlighter() {
         setTitle("Mouse Highlighter");
         setSize(300, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel() {
+        mousePoint = new Point(0, 0);
+
+        addMouseMotionListener(new MouseMotionAdapter() {
             @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawOval(mouseX - 15, mouseY - 15, 30, 30);
-            }
-        };
-
-        panel.addMouseMotionListener(new MouseMotionListener() {
             public void mouseMoved(MouseEvent e) {
-                mouseX = e.getX();
-                mouseY = e.getY();
-                panel.repaint();
-            }
-
-            public void mouseDragged(MouseEvent e) {
+                mousePoint = e.getPoint();
+                repaint();
             }
         });
 
-        this.add(panel);
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                mousePoint = e.getPoint();
+                repaint();
+            }
+        });
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        g.drawOval(mousePoint.x - 15, mousePoint.y - 15, 30, 30);
     }
 
     public static void main(String[] args) {
-        MouseHighlighter frame = new MouseHighlighter();
-        frame.setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            MouseHighlighter frame = new MouseHighlighter();
+            frame.setVisible(true);
+        });
     }
 }

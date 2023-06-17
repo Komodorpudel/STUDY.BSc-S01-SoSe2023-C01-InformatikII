@@ -6,23 +6,33 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class LinePanel extends JPanel {
-    private ArrayList<Point> points = new ArrayList<>();
-    private Point currentPoint = null;
+
+    private ArrayList<Point> points;
+    private Point currentPoint;
 
     public LinePanel() {
+        points = new ArrayList<>();
+        currentPoint = null;
+
+        setPreferredSize(new Dimension(300, 300));
+        setBackground(Color.WHITE);
+
         addMouseListener(new MouseAdapter() {
+            @Override
             public void mousePressed(MouseEvent e) {
                 points.add(e.getPoint());
                 repaint();
             }
         });
 
-        addMouseMotionListener(new MouseAdapter() {
+        addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
             public void mouseDragged(MouseEvent e) {
                 currentPoint = e.getPoint();
                 repaint();
             }
 
+            @Override
             public void mouseReleased(MouseEvent e) {
                 currentPoint = null;
                 repaint();
@@ -40,8 +50,8 @@ public class LinePanel extends JPanel {
         }
 
         if (currentPoint != null && !points.isEmpty()) {
-            Point last = points.get(points.size() - 1);
-            g.drawLine(last.x, last.y, currentPoint.x, currentPoint.y);
+            Point lastPoint = points.get(points.size() - 1);
+            g.drawLine(lastPoint.x, lastPoint.y, currentPoint.x, currentPoint.y);
         }
     }
 }

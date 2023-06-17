@@ -6,33 +6,42 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 
-public class DontMinimizeMe {
+public class DontMinimizeMe extends JFrame {
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Don't minimize me!");
-        frame.setSize(400, 100);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    private JPanel panel;
 
-        JPanel panel = new JPanel(new GridLayout(0, 3));
-        frame.add(panel);
+    public DontMinimizeMe() {
+        setTitle("Don't minimize me!");
+        setSize(400, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.addWindowListener(new WindowAdapter() {
+        panel = new JPanel(new GridLayout(1, 3));
+        add(panel);
+
+        addWindowListener(new WindowAdapter() {
+            @Override
             public void windowIconified(WindowEvent e) {
                 JButton button = new JButton("ouch");
                 panel.add(button);
-                frame.pack();
+                panel.revalidate();
             }
 
+            @Override
             public void windowDeiconified(WindowEvent e) {
                 if (panel.getComponentCount() > 3) {
-                    frame.setTitle("Stop iconifying me");
+                    setTitle("Stop iconifying me");
                 }
                 if (panel.getComponentCount() > 6) {
-                    frame.setTitle("Dude, seriously, stop");
+                    setTitle("Dude, seriously, stop");
                 }
             }
         });
+    }
 
-        frame.setVisible(true);
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            DontMinimizeMe frame = new DontMinimizeMe();
+            frame.setVisible(true);
+        });
     }
 }
