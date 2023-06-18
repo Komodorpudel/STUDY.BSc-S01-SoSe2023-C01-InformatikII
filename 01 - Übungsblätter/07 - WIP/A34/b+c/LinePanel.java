@@ -6,12 +6,21 @@
     // 4. H¨alt der Benutzer die Maustaste gedruckt, soll die Vorschau der Linie angezeigt wer- ¨den, die gezeichnet werden wurde, wenn die Maustaste jetzt losgelassen werden w ¨ urde
 
 // Necessary packages/classes:
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 //
+
+
 
 class LinePanel extends JPanel {
 
@@ -81,7 +90,7 @@ class LinePanel extends JPanel {
 
     // --------------------------------------
 
-    // main
+    // main (Von Aufgabenstellung nicht verlangt -> Wird in Teilaufgabe c erledigt)
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Line Drawing");
@@ -93,4 +102,5 @@ class LinePanel extends JPanel {
     }
 
     // --------------------------------------
+
 }
