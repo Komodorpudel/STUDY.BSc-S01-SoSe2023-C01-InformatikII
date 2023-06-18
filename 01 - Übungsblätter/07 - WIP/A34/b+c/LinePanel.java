@@ -22,8 +22,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 //
 
-
-
 class LinePanel extends JPanel {
 
     // --------------------------------------
