@@ -1,3 +1,4 @@
+// Necessary packages/classes:
 import javax.swing.JFrame;
 
 public class LineFrame extends JFrame {

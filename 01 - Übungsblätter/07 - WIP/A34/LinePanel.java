@@ -2,6 +2,7 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
+// Necessary packages/classes:
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
