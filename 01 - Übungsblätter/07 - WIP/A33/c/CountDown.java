@@ -11,8 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 //
 
-
-
 public class CountDown {
 
     // --------------------------------------
