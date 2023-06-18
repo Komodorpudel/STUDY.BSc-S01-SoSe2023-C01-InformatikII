@@ -1,3 +1,4 @@
+
 // Implementieren Sie ein Hauptanwendungsfenster WhackNMoles.java nach folgenden Vorgaben:
     // 1. Im Zentrum des Fensters soll eine beliebige Anzahl x von Buttons in einem Raster von 3 Spalten angeordnet sein.
     // 2. Die Anzahl der Buttons wird beim Erstellen des Fensters an den Konstruktor ubergeben, ¨die Buttons haben den Text 1, 2 usw. bis x.
@@ -68,6 +69,7 @@ public class WhackNMoles extends JFrame implements ActionListener {
 
     // --------------------------------------
     
+    // main
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
 

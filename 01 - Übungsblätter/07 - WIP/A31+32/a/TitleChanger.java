@@ -1,3 +1,4 @@
+
 // Implementieren Sie ein Hauptanwendungsfenster TitleChanger.java nach folgenden Vorgaben:
     // 1. Das Fenster soll zu Beginn den Titel "TitleChanger" und eine Gr¨oße von 350 × 100 Pixeln haben.
     // 2. Beim Drucken des Fensterkreuzes soll das Fenster geschlossen und das Programm ¨beendet werden.
@@ -59,7 +60,8 @@ public class TitleChanger extends JFrame {
     }
 
     // --------------------------------------
-    
+
+    // main
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             TitleChanger frame = new TitleChanger();
