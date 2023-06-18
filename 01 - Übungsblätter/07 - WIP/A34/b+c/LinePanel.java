@@ -5,6 +5,8 @@
     // 3. Die Zeichenfl¨ache soll die angeklickten Punkte in der Reihenfolge, in der Sie angeklickt wurden, mit Linien verbinden.
     // 4. H¨alt der Benutzer die Maustaste gedruckt, soll die Vorschau der Linie angezeigt wer- ¨den, die gezeichnet werden wurde, wenn die Maustaste jetzt losgelassen werden w ¨ urde
 
+    // Anmerkung SAH: Aufgagenstellung stellt nicht klar, ob ein Punkt bei klick oder bei loslassen nach drücken gespeichert werden soll oder beides
+
 // Necessary packages/classes:
 import java.awt.Color;
 import java.awt.Dimension;
