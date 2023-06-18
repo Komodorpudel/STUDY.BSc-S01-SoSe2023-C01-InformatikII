@@ -25,12 +25,12 @@ public class LineFrame extends JFrame {
         // 1. Das Fenster soll den Titel "Line Frame" tragen.
         setTitle("Line Frame");
 
-        // 3. Ein Klick auf das Fensterkreuz soll das Fenster schließen und die Anwendung beenden.
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         // 2. Das Fenster soll im Zentrum eine Zeichenfl¨ache der vorherigen Teilaufgabe enthalten.
         linePanel = new LinePanel();
         add(linePanel);
+
+        // 3. Ein Klick auf das Fensterkreuz soll das Fenster schließen und die Anwendung beenden.
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         pack();
     }
