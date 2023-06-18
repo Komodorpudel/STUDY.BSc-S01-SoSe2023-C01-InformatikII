@@ -65,6 +65,8 @@ public class TitleChanger extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             TitleChanger frame = new TitleChanger();
+
+            // SAH: Visibility via main erlaubt mehr Spielraum. Eventuell will man, dass mehrere Windows gleichzeitig öffnen
             frame.setVisible(true);
         });
     }
