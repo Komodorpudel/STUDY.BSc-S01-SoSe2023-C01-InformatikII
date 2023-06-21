@@ -1,4 +1,4 @@
-public class Bestellung {
+public class Bestellung implements Rechnung {
 
     private boolean isPrepared;
     private Gast gast;
