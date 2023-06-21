@@ -1,19 +1,13 @@
 public class Bestellung {
 
-    // --------------------------------------
-
     private boolean isPrepared;
+    private Gast gast;
 
-    // --------------------------------------
-
-    // Konstruktor
-    public Bestellung() {
+    public Bestellung(Gast gast) {
+        this.gast = gast;
         this.isPrepared = false;
     }
 
-    // --------------------------------------
-
-    // Getter und Setter für isPrepared
     public boolean getIsPrepared() {
         return isPrepared;
     }
@@ -22,6 +16,13 @@ public class Bestellung {
         this.isPrepared = isPrepared;
     }
 
-    // --------------------------------------
-    
+    ////////////////////////////////////////////////////////
+
+    public Gast getGast() {
+        return gast;
+    }
+
+    public void setGast(Gast gast) {
+        this.gast = gast;
+    }
 }

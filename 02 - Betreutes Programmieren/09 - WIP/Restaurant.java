@@ -10,6 +10,8 @@ public class Restaurant {
     private List<Stammtisch> stammtische = new ArrayList<>();
     private List<Gast> gaeste = new ArrayList<>();
 
+    /////////////////////////////////////////////////////////////////////////
+
     // --------------------------------------
 
     // Konstruktor
@@ -34,5 +36,5 @@ public class Restaurant {
     }
 
     // --------------------------------------
-    
+
 }
