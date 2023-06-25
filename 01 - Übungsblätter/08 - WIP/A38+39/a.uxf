@@ -11,10 +11,10 @@
 - checkAccountHolderName(in accountHolderName: String): boolean (static)
 - checkAccountNumber(in accountNumber: String): boolean (static)
 
-+ setAccountHolderName(in accountHolderName: String): void throws IllegalArgumentException
++ setAccountHolderName(in accountHolderName: String): void {IllegalArgumentException}
 
 + addBalance(in value: double): void
-- setAccountNumber(in accountNumber: String): void throws IllegalArgumentException
+- setAccountNumber(in accountNumber: String): void {IllegalArgumentException}
 
 + getAccountHolderName(): String
 + getAccountNumber(): String
@@ -28,8 +28,8 @@
 - bankAccounts: HashSet&lt;BankAccount&gt; (final)
 
 --
-+ createBankAccount(accountHolderName: String, accountNumber: String): void throws IllegalBankingException
++ createBankAccount(accountHolderName: String, accountNumber: String): void {IllegalBankingException}
 
 + getBalanceByHolder(in accountHolderName: String): double
-+ addBalance(in accountNumber: String, in amount: double): double throws IllegalBankingException
++ addBalance(in accountNumber: String, in amount: double): double {IllegalBankingException}
 </panel_attributes><additional_attributes></additional_attributes></element></diagram>
