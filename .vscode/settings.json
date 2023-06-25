@@ -1,11 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "01 - Übungsblätter/07 - WIP/A34/a",
-        "01 - Übungsblätter/07 - WIP/A33/c",
-        "01 - Übungsblätter/07 - WIP/A33/b",
-        "01 - Übungsblätter/07 - WIP/A33/a",
-        "01 - Übungsblätter/07 - WIP/A31+32/c",
-        "01 - Übungsblätter/07 - WIP/A34/b+c"
+        "01 - Übungsblätter/08 - WIP/A38+39/b"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
