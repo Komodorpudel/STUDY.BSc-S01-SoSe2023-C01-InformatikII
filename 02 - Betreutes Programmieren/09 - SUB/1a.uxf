@@ -1,11 +1,11 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>1136</x><y>190</y><w>100</w><h>30</h></coordinates><panel_attributes>/AbstractClass/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1146</x><y>200</y><w>100</w><h>30</h></coordinates><panel_attributes>/AbstractClass/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>220</y><w>210</w><h>70</h></coordinates><panel_attributes>Stammtisch
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>220</y><w>210</w><h>120</h></coordinates><panel_attributes>Restaurant
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>806</x><y>310</y><w>100</w><h>30</h></coordinates><panel_attributes>/AbstractClass/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>320</y><w>100</w><h>30</h></coordinates><panel_attributes>/AbstractClass/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>86</x><y>340</y><w>210</w><h>70</h></coordinates><panel_attributes>Stammtisch
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>426</x><y>340</y><w>210</w><h>120</h></coordinates><panel_attributes>Restaurant
 --
 - category: String
 - name: String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>470</y><w>290</w><h>300</h></coordinates><panel_attributes>Gast
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>86</x><y>590</y><w>290</w><h>300</h></coordinates><panel_attributes>Gast
 --
 _+ status: String = "König"_
 --
@@ -18,26 +18,26 @@ _+ status: String = "König"_
 + unlinkBestellung(in b: Bestellung)
 + getlinkBestellung(): Bestellung [0..*]
 + getBestellung(in i: Integer): Bestellung
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>836</x><y>660</y><w>260</w><h>130</h></coordinates><panel_attributes>Bestellung
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>506</x><y>780</y><w>260</w><h>130</h></coordinates><panel_attributes>Bestellung
 --
 - isPrepared: Boolean
 --
 + getIsPrepared(): Boolean
-+ setIsPrepared(in b: Bestellung)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>280</y><w>90</w><h>210</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
++ setIsPrepared(in b: Bestellung)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>166</x><y>400</y><w>90</w><h>210</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
 r1= - Gäste
 m1=[3..*]
 m2=[0..*]
-besucht ^</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>696</x><y>620</y><w>230</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
+besucht ^</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>740</y><w>230</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
 m1=
 r2= - Bestellungen
 m2=[1..*]
-bestellt &gt;</panel_attributes><additional_attributes>10;10;140;170</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>210</y><w>160</w><h>150</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;
+bestellt &gt;</panel_attributes><additional_attributes>10;10;140;170</additional_attributes></element><element><id>Relation</id><coordinates><x>286</x><y>330</y><w>160</w><h>150</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;
 r1= -Stammtische
 m1=[0..*]
 m2=
-gehört zu &gt;</panel_attributes><additional_attributes>10;10;140;130</additional_attributes></element><element><id>Relation</id><coordinates><x>696</x><y>330</y><w>180</w><h>300</h></coordinates><panel_attributes>lt=&lt;-
+gehört zu &gt;</panel_attributes><additional_attributes>10;10;140;130</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>450</y><w>180</w><h>300</h></coordinates><panel_attributes>lt=&lt;-
 r1=-Gäste
 m1=[0..100]
 m2=
-besucht ^</panel_attributes><additional_attributes>10;280;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>926</x><y>390</y><w>100</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-Rechnung</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>926</x><y>430</y><w>60</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>40;10;10;230</additional_attributes></element></diagram>
+besucht ^</panel_attributes><additional_attributes>10;280;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>596</x><y>510</y><w>100</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Rechnung</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>596</x><y>550</y><w>60</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>40;10;10;230</additional_attributes></element></diagram>
