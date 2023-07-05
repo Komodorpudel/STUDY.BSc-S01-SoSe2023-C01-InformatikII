@@ -36,10 +36,10 @@ public class ProductManager {
         // 7. Preis des Produkts aktualisieren
         try {
             productDAO.updateProductPrice(productId, newPrice);
-            System.out.println("Preis erfolgreich aktualisiert.");
+            System.out.println("Preis aktualisiert.\n");
         }
         catch (Exception e) {
-            System.out.println("Fehler beim Aktualisieren des Preises. Sie haben möglicherweise keine Berechtigung zur Datenmanipulation.");
+            System.out.println("Fehler beim Aktualisieren des Preises.");
         }
 
         // 8. Streams schließen
