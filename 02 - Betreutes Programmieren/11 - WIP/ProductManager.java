@@ -16,3 +16,5 @@ public class ProductManager {
 
         // Ermittlung und Ausgabe der drei günstigsten Produkte
         List<Product> cheapestProducts = ProductStatistics.findCheapestProducts(products, 3);
+    
+

@@ -5,7 +5,11 @@ import java.util.List;
 public class ProductDAO {
     private Connection connection;
 
-    public ProductDAO(String jdbcUrl, String username, String password) {
+    public ProductDAO() {
+        String jdbcUrl = "http://educos-srv01.informatik.uni-augsburg.de/";
+        String username = "student";
+        String password = "inFormatik";
+        
         try {
             connection = DriverManager.getConnection(jdbcUrl, username, password);
         } catch (SQLException e) {
