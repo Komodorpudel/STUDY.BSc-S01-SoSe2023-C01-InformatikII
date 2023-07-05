@@ -29,6 +29,7 @@ public class ProductStatistics {
         return products.stream()
                 //.sorted(Comparator.reverseOrder())
                 .sorted((p1, p2) -> Double.compare(p1.getPrice(), p2.getPrice()))
+                // reverse statt p1 u p2 vertauschen
                 .limit(count)
                 .collect(Collectors.toList());
     }

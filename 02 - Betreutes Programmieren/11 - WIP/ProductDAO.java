@@ -22,6 +22,7 @@ public class ProductDAO {
         // Try to connect
         try {
             this.connection = DriverManager.getConnection(url, username, password);
+            
             System.out.println("In ProductDAO: Connected successfully!\n");
             System.out.println();
         }
