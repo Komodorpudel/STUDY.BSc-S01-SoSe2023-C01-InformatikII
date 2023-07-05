@@ -13,13 +13,17 @@ public class ProductDAO {
 
     // Konstruktor
     public ProductDAO() {
+
+        // Daten für connection
         String url = "jdbc:mysql://educos-srv01.informatik.uni-augsburg.de:3306/theDatabase?useSSL=false&\serverTimezone=Europe/Berlin";
         String username = "student";
         String password = "inFormatik2";
-        
+
+        // Try to connect
         try {
             this.connection = DriverManager.getConnection(url, username, password);
-            System.out.println("In ProductDAO: Connected successfully!\n\n");
+            System.out.println("In ProductDAO: Connected successfully!\n");
+            System.out.println();
         }
         
         catch (SQLException e) {
@@ -39,7 +43,8 @@ public class ProductDAO {
         // Query that i send to SQL
         String query = "SELECT * FROM Product";
 
-        // try with
+        // try with (Create and exectute statement)
+        // rs is a table
         try (Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
             
@@ -71,16 +76,23 @@ public class ProductDAO {
         String query = "UPDATE Product SET price = ? WHERE id = ?";
 
         // try with
+        // PreparedStatement containing ?
         try (PreparedStatement pstmt = connection.prepareStatement(query)) {
             
+            // Set values of PreparedStatement
             pstmt.setDouble(1, newPrice);
             pstmt.setInt(2, productId);
-            
+
+            // Execute and return number of affected lines
             int updated = pstmt.executeUpdate();
+
+            // If more than 0 lines affected:
             if (updated > 0) {
                 System.out.println("Product price updated successfully!");
             }
-        } catch (SQLException e) {
+        }
+        
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }
