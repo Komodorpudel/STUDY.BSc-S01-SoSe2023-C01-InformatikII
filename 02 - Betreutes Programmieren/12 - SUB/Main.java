@@ -8,7 +8,7 @@ public class Main {
         String neueZeile = "Dies ist eine neue Zeile.";
 
         try {
-            FileWriter fw = new FileWriter(filename, true); // Der zweite Parameter 'true' aktiviert den Anhänge-Modus
+            FileWriter fw = new FileWriter(filename, true); // Der zweite Parameter 'true' aktiviert Anhänge-Modus
             BufferedWriter bw = new BufferedWriter(fw);
 
             bw.newLine(); // Fügt eine neue Zeile hinzu
@@ -16,7 +16,9 @@ public class Main {
 
             bw.close(); // Schließt den BufferedWriter
             fw.close(); // Schließt den FileWriter
-        } catch (IOException e) {
+        }
+        
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
